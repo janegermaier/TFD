@@ -12,7 +12,7 @@ class RFlistener:
 
     def end_keyword(self, name, data):
         with open(self.keyword, "a", newline='') as csvfile:
-            csvfile.write(data.get("kwname") + "," + str(data.get("elapsedtime")) + "," + data.get("status") + "\n")
+            csvfile.write(data.get("kwname") + "," + str(data.get("endtime")) + "," + str(data.get("elapsedtime")) + "," + data.get("status") + "\n")
 
     def end_test(self, name, data):
         pass
